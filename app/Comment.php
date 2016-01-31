@@ -7,16 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * App\Comment
  *
- * @property-read \App\Article $article
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Like[] $likes
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Report[] $reports
- * @property-read \App\User $user
  * @property integer $id
  * @property integer $article_id
  * @property integer $user_id
  * @property string $body
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
+ * @property-read \App\Article $article
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Like[] $likes
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Report[] $reports
+ * @property-read \App\User $user
  */
 class Comment extends Model
 {

@@ -7,15 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * App\Author
  *
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Article[] $articles
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Like[] $likes
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Report[] $reports
- * @property-read \App\User $user
  * @property integer $id
  * @property integer $user_id
  * @property string $name
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Article[] $articles
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Like[] $likes
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Report[] $reports
+ * @property-read \App\User $user
  */
 class Author extends Model
 {

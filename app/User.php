@@ -7,17 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * App\User
  *
- * @property-read \App\Author $author
- * @property-read \App\Author $comments
- * @property-read \App\Like $likes
- * @property-read \App\Report $reports
- * @property-read \App\Review $reviews
  * @property integer $id
  * @property string $name
  * @property string $email
  * @property string $password
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
+ * @property-read \App\Author $author
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Comment[] $comments
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Like[] $likes
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Report[] $reports
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Review[] $reviews
  */
 class User extends Model
 {
@@ -28,21 +28,21 @@ class User extends Model
 
     public function comments()
     {
-        return $this->hasOne(Author::class);
+        return $this->hasMany(Comment::class);
     }
 
     public function likes()
     {
-        return $this->hasOne(Like::class);
+        return $this->hasMany(Like::class);
     }
 
     public function reports()
     {
-        return $this->hasOne(Report::class);
+        return $this->hasMany(Report::class);
     }
 
     public function reviews()
     {
-        return $this->hasOne(Review::class);
+        return $this->hasMany(Review::class);
     }
 }

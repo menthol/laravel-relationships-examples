@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * App\Review
  *
- * @property-read \App\Review $reviewable
- * @property-read \App\User $user
  * @property integer $id
  * @property integer $reviewable_id
  * @property string $reviewable_type
  * @property integer $user_id
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
+ * @property-read \App\Review $reviewable
+ * @property-read \App\User $user
  */
 class Review extends Model
 {

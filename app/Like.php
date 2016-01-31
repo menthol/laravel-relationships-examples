@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * App\Like
  *
- * @property-read \App\Like $likeable
- * @property-read \App\User $user
  * @property integer $id
  * @property integer $likeable_id
  * @property string $likeable_type
  * @property integer $user_id
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
+ * @property-read \App\Like $likeable
+ * @property-read \App\User $user
  */
 class Like extends Model
 {

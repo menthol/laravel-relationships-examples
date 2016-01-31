@@ -23,16 +23,16 @@ An already configured and seeded Sqlite database is located at `/database/databa
 ### HasMany
  - `Article.comments(Comment)`
  - `Author.articles(Article)`
+ - `User.comments(Comment)`
+ - `User.likes(Like)`
+ - `User.reports(Report)`
+ - `User.reviews(Review)`
 
 ### HasManyThrough
  - `Author.comments(Comment, Article)`
 
 ### HasOne
  - `User.author(Author)`
- - `User.comments(Author)`
- - `User.likes(Like)`
- - `User.reports(Report)`
- - `User.reviews(Review)`
 
 ### MorphedByMany
  - `Report.articles(Article, reportable)`
