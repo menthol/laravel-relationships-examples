@@ -36,6 +36,11 @@ class Article extends Model
         return $this->morphMany(Like::class, 'likeable');
     }
 
+    public function node()
+    {
+        return $this->belongsTo(Node::class);
+    }
+
     public function reports()
     {
         return $this->morphToMany(Report::class, 'reportable');
